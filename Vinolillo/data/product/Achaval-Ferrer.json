@@ -1,0 +1,19 @@
+ {
+      "id": "prod_02",
+      "nombre": "Achaval Ferrer Quimera",
+      "descripcion": "Blend de Malbec y Cabernet Sauvignon, cereza negra, tabaco y taninos sedosos",
+      "categoria": "Vinos",
+      "subcategoria": "Vino Tinto",
+      "marca": "Achaval Ferrer",
+      "pais": "Argentina",
+      "region": "Mendoza",
+      "cepa": "Malbec / Cabernet Sauvignon",
+      "anio_cosecha": 2021,
+      "contenido_ml": 750,
+      "alcohol": 14.0,
+      "precio_usd": 38.5,
+      "precio_crc": 20020,
+      "descuento": 0,
+      "cantidad": 100,
+      "imagen": "https://raw.githubusercontent.com/DanielVanetti/Tarea5-Vinolillo/main/img/Achaval_Ferrer_Quimera-removebg-preview.avif"
+    }

@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="es" class="light">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{{ store_name }} — Catálogo de Vinos</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="/assets/vinolillo.css"/>
+</head>
+
+<body>
+
+  <header class="vino-nav" id="mainNav">
+    <div class="d-flex align-items-center gap-5 flex-grow-1">
+      <a href="index.html" class="brand">{{ store_name | upper }}</a>
+      <nav class="vino-nav-links">
+        <a href="../VinolilloCatalogPage.html" class="active">VINOS</a>
+        <a href="../VinolilloCatalogPage.html">DESTILADOS</a>
+        <a href="../VinolilloCatalogPage.html">CERVEZAS</a>
+        <a href="../VinolilloCatalogPage.html">LICORES</a>
+        <a href="../VinolilloCatalogPage.html">PROMOCIONES</a>
+      </nav>
+    </div>
+    <div class="d-flex align-items-center gap-3 ms-auto">
+      <button class="btn btn-link text-dark p-1" aria-label="Buscar"><span class="material-symbols-outlined">search</span></button>
+      <button class="btn btn-link text-dark p-1" aria-label="Mi cuenta"><span class="material-symbols-outlined">settings</span></button>
+      <a href="CartPage.html" class="text-dark p-1" style="position:relative; text-decoration:none;">
+        <span class="material-symbols-outlined">shopping_cart</span>
+        <span class="vino-cart-badge">2</span>
+      </a>
+    </div>
+  </header>
+
+  <main class="page-content" style="padding-top:calc(var(--nav-height) + 32px); padding-bottom:80px;">
+    <div class="container-fluid" style="max-width:1280px; margin:0 auto; padding:0 var(--margin-desk);">
+
+      <nav class="d-flex align-items-center py-3 text-uppercase fw-semibold mb-4" style="font-size:11px; letter-spacing:0.1em; color:var(--vino-muted); gap:4px;">
+        {% for crumb in catalog.breadcrumb %}
+        {% if loop.index1 == catalog.breadcrumb | length %}
+        <span style="color:var(--vino-on-surface);">{{ crumb }}</span>
+        {% else %}
+        <a href="index.html" class="text-decoration-none" style="color:var(--vino-secondary);">{{ crumb }}</a>
+        <span class="material-symbols-outlined" style="font-size:14px; color:var(--vino-border);">chevron_right</span>
+        {% endif %}
+        {% endfor %}
+      </nav>
+
+      <div class="row g-4">
+
+        <div class="col-12 col-lg-3">
+          <div class="pe-lg-4" style="position:sticky; top:calc(var(--nav-height) + 24px);">
+
+            <div class="mb-4 pb-4 border-bottom border-secondary-subtle">
+              <span class="d-block text-uppercase fw-bold text-dark mb-3 pb-2 border-bottom border-secondary-subtle" style="font-size:10px; letter-spacing:0.18em;">PRECIO</span>
+              <input type="range" class="vino-range w-100" min="{{ catalog.filters.price.min }}" max="{{ catalog.filters.price.max }}" step="500" value="{{ catalog.filters.price.current }}" />
+              <div class="d-flex justify-content-between mt-3 text-uppercase fw-semibold text-muted" style="font-size:11px; letter-spacing:0.13em;">
+                <span>₡{{ catalog.filters.price.min }}</span>
+                <span>₡{{ catalog.filters.price.max }}</span>
+              </div>
+            </div>
+
+            <div class="mb-4 pb-4 border-bottom border-secondary-subtle">
+              <span class="d-block text-uppercase fw-bold text-dark mb-3 pb-2 border-bottom border-secondary-subtle" style="font-size:10px; letter-spacing:0.18em;">CATEGORÍA</span>
+              {% for cat in catalog.filters.categorias %}
+              <label class="vino-filter-check mb-2 d-flex align-items-center gap-2" style="cursor:pointer;">
+                <input type="checkbox" {% if cat.checked %}checked{% endif %} />
+                <span class="text-secondary" style="font-size:13px;">{{ cat.name }}</span>
+              </label>
+              {% endfor %}
+            </div>
+
+            <div class="mb-4 pb-4 border-bottom border-secondary-subtle">
+              <span class="d-block text-uppercase fw-bold text-dark mb-3 pb-2 border-bottom border-secondary-subtle" style="font-size:10px; letter-spacing:0.18em;">PAÍS DE ORIGEN</span>
+              {% for pais in catalog.filters.paises %}
+              <label class="vino-filter-check mb-2 d-flex align-items-center gap-2" style="cursor:pointer;">
+                <input type="checkbox" {% if pais.checked %}checked{% endif %} />
+                <span class="text-secondary" style="font-size:13px;">{{ pais.name }}</span>
+              </label>
+              {% endfor %}
+            </div>
+
+            <div class="mb-4 pb-4 border-bottom border-secondary-subtle">
+              <span class="d-block text-uppercase fw-bold text-dark mb-3 pb-2 border-bottom border-secondary-subtle" style="font-size:10px; letter-spacing:0.18em;">VARIEDAD</span>
+              {% for variedad in catalog.filters.variedades %}
+              <label class="vino-filter-check mb-2 d-flex align-items-center gap-2" style="cursor:pointer;">
+                <input type="checkbox" {% if variedad.checked %}checked{% endif %} />
+                <span class="text-secondary" style="font-size:13px;">{{ variedad.name }}</span>
+              </label>
+              {% endfor %}
+            </div>
+
+            <div class="mb-4 pb-4 border-bottom border-secondary-subtle">
+              <span class="d-block text-uppercase fw-bold text-dark mb-3 pb-2 border-bottom border-secondary-subtle" style="font-size:10px; letter-spacing:0.18em;">MARCA</span>
+              {% for marca in catalog.filters.marcas %}
+              <label class="vino-filter-check mb-2 d-flex align-items-center gap-2" style="cursor:pointer;">
+                <input type="checkbox" {% if marca.checked %}checked{% endif %} />
+                <span class="text-secondary" style="font-size:13px;">{{ marca.name }}</span>
+              </label>
+              {% endfor %}
+            </div>
+
+            <div class="mb-4">
+              <span class="d-block text-uppercase fw-bold text-dark mb-3 pb-2 border-bottom border-secondary-subtle" style="font-size:10px; letter-spacing:0.18em;">OFERTAS</span>
+              <label class="vino-filter-check d-flex align-items-center gap-2" style="cursor:pointer;">
+                <input type="checkbox" {% if catalog.filters.solo_oferta %}checked{% endif %} />
+                <span class="text-secondary" style="font-size:13px;">Solo en oferta</span>
+              </label>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="col-12 col-lg-9">
+
+          <div class="d-flex justify-content-between align-items-end pb-4 mb-5 border-bottom border-secondary-subtle flex-wrap gap-3">
+            <div>
+              <div class="d-flex align-items-center gap-2 border-bottom border-dark pb-2 mb-3" style="max-width:320px;">
+                <span class="material-symbols-outlined text-secondary fs-6">search</span>
+                <input type="text" value="{{ catalog.search_query }}" placeholder="Buscar..." class="bg-transparent border-0 outline-none flex-grow-1 text-dark" style="font-size:14px;" />
+              </div>
+              <h1 class="fs-4 mb-1 fw-bold" style="font-family:var(--font-display);">Resultados para "{{ catalog.search_query }}"</h1>
+              <p class="text-uppercase fw-semibold text-muted m-0" style="font-size:10px; letter-spacing:0.13em;">{{ catalog.result_count }} PRODUCTOS ENCONTRADOS</p>
+            </div>
+            <div class="position-relative d-flex align-items-center">
+              <select class="form-select border-0 bg-transparent text-uppercase fw-bold text-dark pe-4 shadow-none" style="font-size:10px; letter-spacing:0.12em; cursor:pointer;">
+                {% for opt in catalog.sort_options %}
+                <option>{{ opt }}</option>
+                {% endfor %}
+              </select>
+            </div>
+          </div>
+
+          <div class="row g-4">
+            {% for prod in catalog.products %}
+            <div class="col-12 col-sm-6 col-xl-4">
+              <a href="{{ prod.href }}" class="vino-card-link">
+                <div class="vino-card h-100 d-flex flex-column">
+                  <div class="vino-card-img{% if prod.agotado %} position-relative{% endif %}" style="padding:24px;">
+                    <img src="{{ prod.image }}" alt="{{ prod.name }}"{% if prod.agotado %} style="opacity:.7;"{% endif %} />
+                    {% if prod.badge %}
+                    <span class="vino-card-badge {% if prod.badge_style == "dark" %}bg-dark{% else if prod.badge_style == "agotado" %}bg-burgundy-light{% endif %}">{{ prod.badge }}</span>
+                    {% endif %}
+                  </div>
+                  <div class="d-flex flex-column flex-grow-1"{% if prod.agotado %} style="opacity:.75; padding:20px;"{% else %} style="padding:20px;"{% endif %}>
+                    <div class="d-flex justify-content-between align-items-start mb-2">
+                      <h3 class="text-dark" style="font-size:16px; margin:0; transition:color 0.2s;">{{ prod.name }}</h3>
+                      <span class="text-uppercase fw-semibold border border-secondary-subtle text-muted px-1 ms-2" style="font-size:9px;">750ML</span>
+                    </div>
+                    <p class="text-secondary" style="font-size:13px; margin-bottom:0;">{{ prod.origin }} • {{ prod.cepa }}</p>
+                    <div class="d-flex justify-content-between align-items-center mt-auto" style="padding-top:16px;">
+                      <span class="text-dark" style="font-size:18px; font-weight:600;">₡{{ prod.price_crc }}</span>
+                      {% if prod.agotado %}
+                      <button class="btn btn-light bg-secondary-subtle text-secondary px-3 py-2 text-uppercase fw-bold border-0" style="font-size:11px; letter-spacing:0.13em; cursor:not-allowed;" disabled onclick="event.stopPropagation();">AGOTADO</button>
+                      {% else %}
+                      <button class="btn-vino btn-vino-primary px-3 py-2 border-0" data-add-cart onclick="event.stopPropagation();" style="font-size:11px; letter-spacing:0.13em;">AGREGAR</button>
+                      {% endif %}
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+            {% endfor %}
+          </div>
+
+          <nav class="d-flex justify-content-center align-items-center mt-5" style="gap:4px;">
+            <button class="btn btn-outline-secondary d-flex align-items-center justify-content-center border-secondary-subtle rounded-0" style="width:44px; height:44px;" disabled aria-label="Anterior">
+              <span class="material-symbols-outlined fs-5">chevron_left</span>
+            </button>
+            {% for page in catalog.pagination.pages %}
+            {% if page == catalog.pagination.current %}
+            <button class="btn btn-dark d-flex align-items-center justify-content-center rounded-0" style="width:44px; height:44px; font-size:12px; font-weight:600;">{{ page }}</button>
+            {% else %}
+            {% if catalog.pagination.ellipsis_before_last and loop.is_last %}
+            <span class="text-secondary px-2 fs-6">...</span>
+            {% endif %}
+            <button class="btn btn-outline-secondary d-flex align-items-center justify-content-center border-secondary-subtle rounded-0 text-dark" style="width:44px; height:44px; font-size:12px; font-weight:600;">{{ page }}</button>
+            {% endif %}
+            {% endfor %}
+            <button class="btn btn-outline-secondary d-flex align-items-center justify-content-center border-secondary-subtle rounded-0 text-dark" style="width:44px; height:44px;" aria-label="Siguiente">
+              <span class="material-symbols-outlined fs-5">chevron_right</span>
+            </button>
+          </nav>
+
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="vino-footer">
+    <div class="row g-4" style="max-width:1280px;margin:0 auto;">
+      <div class="col-12 col-md-4">
+        <span class="font-display fw-bold d-block mb-3 fs-5">{{ store_name | upper }}</span>
+        <p class="text-secondary" style="font-size:13px; line-height:1.7;">{{ footer.slogan }}</p>
+      </div>
+      <div class="col-6 col-md-2">
+        <span class="text-uppercase fw-bold d-block mb-3" style="font-size:10px; letter-spacing:0.18em;">PRODUCTOS</span>
+        {% for link in footer.quick_links %}
+        <a href="{{ link.href }}" class="d-block mb-2" style="font-size:13px;">{{ link.name }}</a>
+        {% endfor %}
+      </div>
+      <div class="col-6 col-md-3">
+        <span class="text-uppercase fw-bold d-block mb-3" style="font-size:10px; letter-spacing:0.18em;">TIENDA</span>
+        {% for link in footer.store_links %}
+        <a href="{{ link.href }}" class="d-block mb-2" style="font-size:13px;">{{ link.name }}</a>
+        {% endfor %}
+      </div>
+      <div class="col-6 col-md-2">
+        <span class="text-uppercase fw-bold d-block mb-3" style="font-size:10px; letter-spacing:0.18em;">LEGAL</span>
+        <p class="text-uppercase fw-semibold text-secondary mb-0" style="font-size:10px; letter-spacing:0.13em;">{{ footer.legal_text }}</p>
+        <p class="text-secondary mt-4 mb-0 opacity-75" style="font-size:13px; letter-spacing:0.5px;">{{ footer.developed_by }}</p>
+        <div class="d-flex gap-3 mt-3">
+          <a href="#" style="color:var(--vino-secondary);"><span class="material-symbols-outlined">share</span></a>
+          <a href="#" style="color:var(--vino-secondary);"><span class="material-symbols-outlined">public</span></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/vinolillo.js"></script>
+</body>
+
+</html>

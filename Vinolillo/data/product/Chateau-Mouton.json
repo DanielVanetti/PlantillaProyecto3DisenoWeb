@@ -1,0 +1,20 @@
+{
+      "id": "prod_08",
+      "nombre": "Chateau Mouton Rothschild",
+      "descripcion": "Gran vino de Burdeos, cassis, cedro y tierra húmeda, muy largo",
+      "categoria": "Vinos",
+      "subcategoria": "Vino Tinto",
+      "marca": "Chateau Mouton Rothschild",
+      "pais": "Francia",
+      "region": "Pauillac",
+      "cepa": "Cabernet Sauvignon / Merlot",
+      "anio_cosecha": 2018,
+      "contenido_ml": 750,
+      "alcohol": 13.0,
+      "precio_usd": 520.0,
+      "precio_crc": 270400,
+      "descuento": 5,
+      "cantidad": 100,
+      "badge": "EXCLUSIVO",
+      "imagen": "https://raw.githubusercontent.com/DanielVanetti/Tarea5-Vinolillo/main/img/Chateau_Mouton_Rothschild-removebg-preview.avif"
+    }

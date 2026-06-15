@@ -1,0 +1,19 @@
+{
+      "id": "prod_03",
+      "nombre": "Zuccardi Valle de Uco Malbec",
+      "descripcion": "Malbec de altura con notas de frutos negros y toques florales",
+      "categoria": "Vinos",
+      "subcategoria": "Vino Tinto",
+      "marca": "Zuccardi",
+      "pais": "Argentina",
+      "region": "Valle de Uco",
+      "cepa": "Malbec",
+      "anio_cosecha": 2021,
+      "contenido_ml": 750,
+      "alcohol": 13.5,
+      "precio_usd": 32.99,
+      "precio_crc": 17155,
+      "descuento": 0,
+      "cantidad": 20,
+      "imagen": "https://raw.githubusercontent.com/DanielVanetti/Tarea5-Vinolillo/main/img/Zuccardi_Valle_de_Uco_Malbec-removebg-preview.avif"
+    }

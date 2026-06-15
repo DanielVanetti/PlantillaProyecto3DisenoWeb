@@ -1,0 +1,20 @@
+ {
+      "id": "prod_04",
+      "nombre": "Concha y Toro Don Melchor Cabernet Sauvignon",
+      "descripcion": "Vino emblemático chileno, moras negras, cedro y tabaco, taninos firmes",
+      "categoria": "Vinos",
+      "subcategoria": "Vino Tinto",
+      "marca": "Concha y Toro",
+      "pais": "Chile",
+      "region": "Valle del Maipo",
+      "cepa": "Cabernet Sauvignon",
+      "anio_cosecha": 2020,
+      "contenido_ml": 750,
+      "alcohol": 14.0,
+      "precio_usd": 75.0,
+      "precio_crc": 39000,
+      "descuento": 0,
+      "cantidad": 40,
+      "badge": "PREMIUM SELECT",
+      "imagen": "https://raw.githubusercontent.com/DanielVanetti/Tarea5-Vinolillo/main/img/Concha_y_Toro_Don_Melchor_Cabernet_Sauvignon-removebg-preview.avif"
+    }

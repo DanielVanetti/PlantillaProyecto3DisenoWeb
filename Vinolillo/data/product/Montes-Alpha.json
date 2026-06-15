@@ -1,0 +1,19 @@
+  {
+      "id": "prod_05",
+      "nombre": "Montes Alpha Cabernet Sauvignon",
+      "descripcion": "Cabernet chileno, frutos negros, menta y roble tostado con buen cuerpo",
+      "categoria": "Vinos",
+      "subcategoria": "Vino Tinto",
+      "marca": "Montes",
+      "pais": "Chile",
+      "region": "Valle de Colchagua",
+      "cepa": "Cabernet Sauvignon",
+      "anio_cosecha": 2021,
+      "contenido_ml": 750,
+      "alcohol": 14.0,
+      "precio_usd": 24.99,
+      "precio_crc": 12995,
+      "descuento": 0,
+      "cantidad": 40,
+      "imagen": "https://raw.githubusercontent.com/DanielVanetti/Tarea5-Vinolillo/main/img/Montes_Alpha_Cabernet_Sauvignon-removebg-preview.avif"
+    }

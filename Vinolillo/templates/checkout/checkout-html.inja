@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="es" class="light">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>{{ store_name }} — Finalizar Compra</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="/assets/vinolillo.css"/>
+</head>
+<body>
+
+<header class="vino-nav" id="mainNav">
+  <div class="d-flex align-items-center gap-5 flex-grow-1">
+    <a href="index.html" class="brand">{{ store_name | upper }}</a>
+  </div>
+  <div class="d-flex align-items-center gap-3 ms-auto">
+    <button class="btn btn-link text-dark p-1" aria-label="Mi cuenta"><span class="material-symbols-outlined">settings</span></button>
+    <a href="CartPage.html" class="text-dark p-1" style="position:relative; text-decoration:none;">
+      <span class="material-symbols-outlined">shopping_cart</span>
+      <span class="vino-cart-badge">{{ checkout.items | length }}</span>
+    </a>
+  </div>
+</header>
+
+<main class="page-content" style="padding-bottom:80px;">
+  <div class="container-fluid" style="max-width:1024px; margin:0 auto; padding:40px 24px;">
+
+    <div class="d-flex align-items-center mb-5 flex-wrap gap-2">
+      {% for step in checkout.steps %}
+      <div class="{% if step.active %}checkout-step active{% endif %} d-flex align-items-center gap-2 text-uppercase fw-bold {% if step.active or step.done %}text-dark{% else %}text-muted{% endif %}" style="font-size:10px; letter-spacing:0.15em;">
+        <span class="checkout-step-num {% if step.done %}bg-burgundy text-white border-0{% endif %}">{{ step.num }}</span>
+        {{ step.label }}
+      </div>
+      {% if not loop.is_last %}
+      <div class="flex-grow-1 bg-secondary opacity-25 mx-2" style="height:1px; min-width:16px;"></div>
+      {% endif %}
+      {% endfor %}
+    </div>
+
+    <div class="row g-5">
+      <div class="col-12 col-lg-7">
+
+        <section class="mb-5">
+          <h2 class="fs-5 mb-4 fw-bold">01. Información Personal</h2>
+          <div class="row g-3">
+            <div class="col-12 col-md-6">
+              <label class="text-uppercase fw-bold text-muted mb-2 d-block" style="font-size:10px; letter-spacing:0.15em;">NOMBRE COMPLETO</label>
+              <input class="vino-input-box" type="text" placeholder="Ej. Juan Pérez"/>
+            </div>
+            <div class="col-12 col-md-6">
+              <label class="text-uppercase fw-bold text-muted mb-2 d-block" style="font-size:10px; letter-spacing:0.15em;">CORREO ELECTRÓNICO</label>
+              <input class="vino-input-box" type="email" placeholder="juan@ejemplo.com"/>
+            </div>
+            <div class="col-12">
+              <label class="text-uppercase fw-bold text-muted mb-2 d-block" style="font-size:10px; letter-spacing:0.15em;">TELÉFONO</label>
+              <input class="vino-input-box" type="tel" placeholder="+506 8888-8888"/>
+            </div>
+          </div>
+        </section>
+
+        <section class="mb-5">
+          <h2 class="fs-5 mb-4 fw-bold">02. Dirección de Entrega</h2>
+          <div class="row g-3">
+            <div class="col-12 col-md-6">
+              <label class="text-uppercase fw-bold text-muted mb-2 d-block" style="font-size:10px; letter-spacing:0.15em;">PROVINCIA</label>
+              <select class="form-select border-0 border-bottom border-dark rounded-0 px-0 py-2 bg-transparent shadow-none" style="font-size:14px; cursor:pointer;">
+                <option value="">Seleccione una provincia</option>
+                {% for prov in checkout.provincias %}
+                <option>{{ prov }}</option>
+                {% endfor %}
+              </select>
+            </div>
+            <div class="col-12 col-md-6">
+              <label class="text-uppercase fw-bold text-muted mb-2 d-block" style="font-size:10px; letter-spacing:0.15em;">CANTÓN</label>
+              <input class="vino-input-box" type="text" placeholder="Ej. Escazú"/>
+            </div>
+            <div class="col-12">
+              <label class="text-uppercase fw-bold text-muted mb-2 d-block" style="font-size:10px; letter-spacing:0.15em;">DIRECCIÓN EXACTA</label>
+              <input class="vino-input-box" type="text" placeholder="Otras señas, número de casa, etc."/>
+            </div>
+            <div class="col-12 col-md-6">
+              <label class="text-uppercase fw-bold text-muted mb-2 d-block" style="font-size:10px; letter-spacing:0.15em;">CÓDIGO POSTAL</label>
+              <input class="vino-input-box" type="text" placeholder="10203"/>
+            </div>
+          </div>
+        </section>
+
+        <section class="mb-5">
+          <h2 class="fs-5 mb-4 fw-bold">03. Método de Entrega</h2>
+          <div class="d-flex gap-3 flex-wrap">
+            {% for metodo in checkout.metodos_entrega %}
+            <label class="{% if metodo.default %}border border-dark bg-light{% else %}border{% endif %} p-3 d-flex align-items-center gap-3" style="flex:1; min-width:180px; cursor:pointer;">
+              <input type="radio" name="delivery" value="{{ metodo.id }}" {% if metodo.default %}checked{% endif %} style="accent-color:var(--vino-burgundy-light); width:16px; height:16px;"/>
+              <div>
+                <div class="text-uppercase fw-semibold" style="font-size:11px;">{{ metodo.nombre }}</div>
+                {% if metodo.costo_crc > 0 %}
+                <div class="text-secondary mt-1" style="font-size:13px;">₡{{ metodo.costo_crc }}</div>
+                {% else %}
+                <div class="text-burgundy-light mt-1 fw-bold" style="font-size:13px;">GRATIS</div>
+                {% endif %}
+              </div>
+            </label>
+            {% endfor %}
+          </div>
+        </section>
+
+        <section class="mb-5">
+          <h2 class="fs-5 mb-4 fw-bold">04. Pago con Tarjeta</h2>
+          <div class="row g-3">
+            <div class="col-12">
+              <label class="text-uppercase fw-bold text-muted mb-2 d-block" style="font-size:10px; letter-spacing:0.15em;">NÚMERO DE TARJETA</label>
+              <input class="vino-input-box" type="text" placeholder="•••• •••• •••• ____"/>
+            </div>
+            <div class="col-12 col-md-6">
+              <label class="text-uppercase fw-bold text-muted mb-2 d-block" style="font-size:10px; letter-spacing:0.15em;">VENCIMIENTO (MM/AA)</label>
+              <input class="vino-input-box" type="text" placeholder="MM / AA"/>
+            </div>
+            <div class="col-12 col-md-6">
+              <label class="text-uppercase fw-bold text-muted mb-2 d-block" style="font-size:10px; letter-spacing:0.15em;">CVV</label>
+              <input class="vino-input-box" type="text" placeholder="123"/>
+            </div>
+          </div>
+        </section>
+
+        <div class="mb-4">
+          <label class="d-flex align-items-center gap-2" style="cursor:pointer;">
+            <input type="checkbox" style="width:16px;height:16px;accent-color:var(--vino-burgundy-light);"/>
+            <span class="text-secondary" style="font-size:14px;">Confirmo que soy mayor de 18 años.</span>
+          </label>
+        </div>
+
+        <button class="btn-vino btn-vino-burgundy w-100 py-3 fs-6">
+          CONFIRMAR PEDIDO
+        </button>
+        <p class="text-center mt-3" style="font-size:12px;">
+          <a href="../index.html" class="text-burgundy-light text-decoration-none">Términos y Condiciones</a>
+        </p>
+      </div>
+
+      <div class="col-12 col-lg-5">
+        <div class="bg-white border p-4" style="position:sticky; top:calc(var(--nav-height)+24px);">
+          <h3 class="text-uppercase mb-4" style="font-size:18px; letter-spacing:0.05em;">Resumen del Pedido</h3>
+
+          {% for item in checkout.items %}
+          <div class="d-flex gap-3 pb-4 mb-4 border-bottom">
+            <img src="{{ item.imagen }}" style="width:60px; height:72px; object-fit:contain; background:var(--vino-container-low); padding:4px;" alt="{{ item.nombre }}"/>
+            <div class="flex-grow-1">
+              <div class="fw-semibold text-dark" style="font-size:14px;">{{ item.nombre }}</div>
+              <div class="text-uppercase text-muted" style="font-size:10px; margin:4px 0; letter-spacing:0.05em;">{{ item.detalle }}</div>
+              <div class="text-secondary" style="font-size:12px;">Cant: {{ item.cantidad }}</div>
+            </div>
+            <div class="fw-medium" style="font-size:16px;">₡{{ item.precio_crc }}</div>
+          </div>
+          {% endfor %}
+
+          <div class="d-flex justify-content-between py-2 text-secondary" style="font-size:13px;">
+            <span>Subtotal</span><span>₡{{ checkout.resumen.subtotal_crc }}</span>
+          </div>
+          <div class="d-flex justify-content-between py-2 text-secondary" style="font-size:13px;">
+            <span>Envío</span><span>₡{{ checkout.resumen.envio_crc }}</span>
+          </div>
+          <div class="d-flex justify-content-between py-2 text-secondary" style="font-size:13px;">
+            <span>Impuestos (13%)</span><span>₡{{ checkout.resumen.iva_crc }}</span>
+          </div>
+          <div class="d-flex justify-content-between align-items-center pt-3 mt-2 border-top">
+            <span class="text-uppercase fw-semibold" style="font-size:11px; letter-spacing:0.13em;">TOTAL</span>
+            <span class="fs-3 fw-bold text-burgundy-light">₡{{ checkout.resumen.total_crc }}</span>
+          </div>
+
+          <div class="mt-4 p-3 d-flex align-items-start gap-3 bg-light border">
+            <span class="material-symbols-outlined text-burgundy-light fs-5">verified_user</span>
+            <div>
+              <div class="text-uppercase fw-bold mb-1" style="font-size:10px; letter-spacing:0.15em;">COMPRA SEGURA</div>
+              <p class="text-secondary mb-0" style="font-size:12px; line-height:1.5;">
+                Tus datos están protegidos por encriptación SSL de grado bancario. No almacenamos los datos de tu tarjeta.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="vino-footer">
+  <div class="row g-4" style="max-width:1280px;margin:0 auto;">
+    <div class="col-12 col-md-4">
+      <span class="font-display fw-bold d-block mb-3 fs-5">{{ store_name | upper }}</span>
+      <p class="text-secondary" style="font-size:13px; line-height:1.7;">{{ footer.slogan }}</p>
+    </div>
+    <div class="col-6 col-md-2">
+      <span class="text-uppercase fw-bold d-block mb-3" style="font-size:10px; letter-spacing:0.18em;">PRODUCTOS</span>
+      {% for link in footer.quick_links %}
+      <a href="{{ link.href }}" class="d-block mb-2" style="font-size:13px;">{{ link.name }}</a>
+      {% endfor %}
+    </div>
+    <div class="col-6 col-md-3">
+      <span class="text-uppercase fw-bold d-block mb-3" style="font-size:10px; letter-spacing:0.18em;">TIENDA</span>
+      {% for link in footer.store_links %}
+      <a href="{{ link.href }}" class="d-block mb-2" style="font-size:13px;">{{ link.name }}</a>
+      {% endfor %}
+    </div>
+    <div class="col-6 col-md-2">
+      <span class="text-uppercase fw-bold d-block mb-3" style="font-size:10px; letter-spacing:0.18em;">LEGAL</span>
+      <p class="text-uppercase fw-semibold text-secondary mb-0" style="font-size:10px; letter-spacing:0.13em;">{{ footer.legal_text }}</p>
+      <p class="text-secondary mt-4 mb-0 opacity-75" style="font-size:13px; letter-spacing:0.5px;">{{ footer.developed_by }}</p>
+      <div class="d-flex gap-3 mt-3">
+        <a href="#" style="color:var(--vino-secondary);"><span class="material-symbols-outlined">share</span></a>
+        <a href="#" style="color:var(--vino-secondary);"><span class="material-symbols-outlined">public</span></a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/vinolillo.js"></script>
+</body>
+</html>

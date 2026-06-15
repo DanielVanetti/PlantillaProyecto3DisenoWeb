@@ -1,0 +1,19 @@
+ {
+      "id": "prod_10",
+      "nombre": "Glenfiddich 15 Años Single Malt",
+      "descripcion": "Single malt premium, miel, fruta madura y roble con final suave",
+      "categoria": "Destilados",
+      "subcategoria": "Whisky",
+      "marca": "Glenfiddich",
+      "pais": "Escocia",
+      "region": "Speyside",
+      "cepa": "Single Malt",
+      "anio_cosecha": null,
+      "contenido_ml": 750,
+      "alcohol": 40.0,
+      "precio_usd": 59.99,
+      "precio_crc": 31195,
+      "descuento": 0,
+      "cantidad": 20,
+      "imagen": "https://raw.githubusercontent.com/DanielVanetti/Tarea5-Vinolillo/main/img/Glenfiddich_15_anos_Single_Malt-removebg-preview.avif"
+ }

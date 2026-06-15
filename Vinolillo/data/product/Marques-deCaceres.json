@@ -1,0 +1,19 @@
+ {
+      "id": "prod_06",
+      "nombre": "Marques de Caceres Crianza Rioja",
+      "descripcion": "Tempranillo con vainilla, cereza y notas de roble americano, elegante",
+      "categoria": "Vinos",
+      "subcategoria": "Vino Tinto",
+      "marca": "Marques de Caceres",
+      "pais": "España",
+      "region": "Rioja",
+      "cepa": "Tempranillo",
+      "anio_cosecha": 2020,
+      "contenido_ml": 750,
+      "alcohol": 13.5,
+      "precio_usd": 19.99,
+      "precio_crc": 10395,
+      "descuento": 0,
+      "cantidad": 30,
+      "imagen": "https://raw.githubusercontent.com/DanielVanetti/Tarea5-Vinolillo/main/img/Marques_de_Caceres_Crianza_Rioja-removebg-preview.avif"
+    }

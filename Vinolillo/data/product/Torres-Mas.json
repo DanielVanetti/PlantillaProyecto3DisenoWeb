@@ -1,0 +1,19 @@
+{
+      "id": "prod_07",
+      "nombre": "Torres Mas La Plana Cabernet Sauvignon",
+      "descripcion": "Cabernet Sauvignon premium de Penedés, intenso con ciruela madura",
+      "categoria": "Vinos",
+      "subcategoria": "Vino Tinto",
+      "marca": "Torres",
+      "pais": "España",
+      "region": "Penedés",
+      "cepa": "Cabernet Sauvignon",
+      "anio_cosecha": 2019,
+      "contenido_ml": 750,
+      "alcohol": 13.5,
+      "precio_usd": 45.0,
+      "precio_crc": 23400,
+      "descuento": 0,
+      "cantidad": 100,
+      "imagen": "https://raw.githubusercontent.com/DanielVanetti/Tarea5-Vinolillo/main/img/Torres_Mas_La_Plana_Cabernet_Sauvignon-removebg-preview.avif"
+    }

@@ -1,0 +1,19 @@
+ {
+      "id": "prod_01",
+      "nombre": "Catena Zapata Adrianna Vineyard Malbec",
+      "descripcion": "Vino tinto icónico, notas de mora, violetas y especias con final largo",
+      "categoria": "Vinos",
+      "subcategoria": "Vino Tinto",
+      "marca": "Catena Zapata",
+      "pais": "Argentina",
+      "region": "Mendoza",
+      "cepa": "Malbec",
+      "anio_cosecha": 2020,
+      "contenido_ml": 750,
+      "alcohol": 14.5,
+      "precio_usd": 89.99,
+      "precio_crc": 46795,
+      "descuento": 0,
+      "cantidad": 50,
+      "imagen": "https://raw.githubusercontent.com/DanielVanetti/Tarea5-Vinolillo/main/img/Catena_Zapata_Adrianna_Vineyard_Malbec-removebg-preview.avif"
+    }
