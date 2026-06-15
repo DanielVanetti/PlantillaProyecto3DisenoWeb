@@ -1,0 +1,136 @@
+{
+  "store_name": "Vinolillo",
+  "catalog": {
+    "breadcrumb": ["Inicio", "Vinos", "Tinto"],
+    "filters": {
+      "price": { "min": 5000, "max": 150000, "current": 150000 },
+      "categorias": [
+        { "name": "Vinos Tintos", "checked": true },
+        { "name": "Vinos Blancos", "checked": false },
+        { "name": "Espumantes", "checked": false },
+        { "name": "Rosados", "checked": false }
+      ],
+      "paises": [
+        { "name": "Chile", "checked": false },
+        { "name": "Argentina", "checked": false },
+        { "name": "España", "checked": true },
+        { "name": "Francia", "checked": false }
+      ],
+      "variedades": [
+        { "name": "Cabernet Sauvignon", "checked": false },
+        { "name": "Merlot", "checked": false },
+        { "name": "Malbec", "checked": false }
+      ],
+      "marcas": [
+        { "name": "Marqués de Riscal", "checked": false },
+        { "name": "Concha y Toro", "checked": false },
+        { "name": "Catena Zapata", "checked": false }
+      ],
+      "solo_oferta": true
+    },
+    "search_query": "Vinos",
+    "result_count": 42,
+    "sort_options": [
+      "ORDENAR POR: RELEVANCIA",
+      "PRECIO: MENOR A MAYOR",
+      "PRECIO: MAYOR A MENOR",
+      "MÁS NUEVOS"
+    ],
+    "products": [
+      {
+        "id": "prod_06",
+        "name": "Marqués de Cáceres Crianza Rioja",
+        "origin": "Rioja, España",
+        "cepa": "Tempranillo",
+        "price_crc": 18500,
+        "badge": "EN OFERTA",
+        "badge_style": "dark",
+        "agotado": false,
+        "image": "https://raw.githubusercontent.com/DanielVanetti/Tarea5-Vinolillo/main/img/Marques_de_Caceres_Crianza_Rioja-removebg-preview.avif",
+        "href": "ProducDetailPage.html"
+      },
+      {
+        "id": "prod_01",
+        "name": "Catena Zapata Adrianna Vineyard Malbec",
+        "origin": "Mendoza, Argentina",
+        "cepa": "Malbec",
+        "price_crc": 24900,
+        "badge": null,
+        "badge_style": null,
+        "agotado": false,
+        "image": "https://raw.githubusercontent.com/DanielVanetti/Tarea5-Vinolillo/main/img/Catena_Zapata_Adrianna_Vineyard_Malbec-removebg-preview.avif",
+        "href": "ProducDetailPage.html"
+      },
+      {
+        "id": "prod_04",
+        "name": "Concha y Toro Don Melchor Cabernet Sauvignon",
+        "origin": "Puente Alto, Chile",
+        "cepa": "Cabernet",
+        "price_crc": 72000,
+        "badge": null,
+        "badge_style": null,
+        "agotado": false,
+        "image": "https://raw.githubusercontent.com/DanielVanetti/Tarea5-Vinolillo/main/img/Concha_y_Toro_Don_Melchor_Cabernet_Sauvignon-removebg-preview.avif",
+        "href": "ProducDetailPage.html"
+      },
+      {
+        "id": "prod_08",
+        "name": "Château Mouton Rothschild",
+        "origin": "Bordeaux, Francia",
+        "cepa": "Blend",
+        "price_crc": 88500,
+        "badge": null,
+        "badge_style": null,
+        "agotado": false,
+        "image": "https://raw.githubusercontent.com/DanielVanetti/Tarea5-Vinolillo/main/img/Chateau_Mouton_Rothschild-removebg-preview.avif",
+        "href": "ProducDetailPage.html"
+      },
+      {
+        "id": "prod_07",
+        "name": "Torres Mas La Plana Cabernet Sauvignon",
+        "origin": "Rioja, España",
+        "cepa": "Tempranillo",
+        "price_crc": 54200,
+        "badge": null,
+        "badge_style": null,
+        "agotado": false,
+        "image": "https://raw.githubusercontent.com/DanielVanetti/Tarea5-Vinolillo/main/img/Torres_Mas_La_Plana_Cabernet_Sauvignon-removebg-preview.avif",
+        "href": "ProducDetailPage.html"
+      },
+      {
+        "id": "prod_05",
+        "name": "Montes Alpha Cabernet Sauvignon",
+        "origin": "Valle de Colchagua, Chile",
+        "cepa": "Merlot",
+        "price_crc": 21800,
+        "badge": "AGOTADO",
+        "badge_style": "agotado",
+        "agotado": true,
+        "image": "https://raw.githubusercontent.com/DanielVanetti/Tarea5-Vinolillo/main/img/Montes_Alpha_Cabernet_Sauvignon-removebg-preview.avif",
+        "href": "ProducDetailPage.html"
+      }
+    ],
+    "pagination": {
+      "current": 1,
+      "pages": [1, 2, 3, 14],
+      "ellipsis_before_last": true
+    }
+  },
+  "footer": {
+    "slogan": "Especialistas en la curaduría de vinos finos y experiencias sensoriales de alta gama.",
+    "quick_links": [
+      { "name": "Vinos Tintos", "href": "#" },
+      { "name": "Blancos Premium", "href": "#" },
+      { "name": "Espumantes", "href": "#" },
+      { "name": "Destilados", "href": "#" }
+    ],
+    "store_links": [
+      { "name": "Ubicación", "href": "#" },
+      { "name": "Información de la Tienda", "href": "#" },
+      { "name": "Política de Envíos", "href": "#" },
+      { "name": "Contacto", "href": "#" }
+    ],
+    "legal_text": "© 2026 VINOLILLO. Solo para mayores de 18 años.",
+    "developed_by": "Desarrollado por Daniel González & Josué Solórzano"
+  }
+}
