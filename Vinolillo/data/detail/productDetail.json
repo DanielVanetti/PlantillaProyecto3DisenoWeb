@@ -1,0 +1,77 @@
+{
+  "store_name": "Vinolillo",
+  "tipo_cambio_crc": 520,
+  "producto_actual": {
+    "id": "prod_04",
+    "nombre": "Concha y Toro Don Melchor Cabernet Sauvignon",
+    "descripcion": "Vino emblemático chileno con notas de moras negras, cedro y tabaco, acompañadas de taninos firmes y una estructura elegante. Un Cabernet Sauvignon de carácter excepcional, criado en el legendario Valle del Maipo con décadas de historia vitivinícola.",
+    "categoria": "Vinos",
+    "subcategoria": "Vino Tinto",
+    "marca": "Concha y Toro",
+    "pais": "Chile",
+    "region": "Valle del Maipo",
+    "cepa": "Cabernet Sauvignon",
+    "anio_cosecha": 2020,
+    "contenido_ml": 750,
+    "alcohol": 14.0,
+    "precio_usd": 75.0,
+    "precio_crc": 39000,
+    "descuento": 0,
+    "badge": "PREMIUM SELECT",
+    "imagen": "https://raw.githubusercontent.com/DanielVanetti/Tarea5-Vinolillo/main/img/Concha_y_Toro_Don_Melchor_Cabernet_Sauvignon-removebg-preview.avif"
+  },
+  "sections": [
+    {
+      "id": "relacionados",
+      "type": "product_grid",
+      "title": "Productos Relacionados",
+      "products": [
+        {
+          "id": "prod_05",
+          "name": "Montes Alpha Cabernet Sauvignon",
+          "brand": "MONTES",
+          "price_crc": 12995,
+          "image": "https://raw.githubusercontent.com/DanielVanetti/Tarea5-Vinolillo/main/img/Montes_Alpha_Cabernet_Sauvignon-removebg-preview.avif"
+        },
+        {
+          "id": "prod_02",
+          "name": "Achaval Ferrer Quimera",
+          "brand": "ACHAVAL FERRER",
+          "price_crc": 20020,
+          "image": "https://raw.githubusercontent.com/DanielVanetti/Tarea5-Vinolillo/main/img/Achaval_Ferrer_Quimera-removebg-preview.avif"
+        },
+        {
+          "id": "prod_07",
+          "name": "Torres Mas La Plana Cabernet Sauvignon",
+          "brand": "TORRES",
+          "price_crc": 23400,
+          "image": "https://raw.githubusercontent.com/DanielVanetti/Tarea5-Vinolillo/main/img/Torres_Mas_La_Plana_Cabernet_Sauvignon-removebg-preview.avif"
+        },
+        {
+          "id": "prod_03",
+          "name": "Zuccardi Valle de Uco Malbec",
+          "brand": "ZUCCARDI",
+          "price_crc": 17155,
+          "image": "https://raw.githubusercontent.com/DanielVanetti/Tarea5-Vinolillo/main/img/Zuccardi_Valle_de_Uco_Malbec-removebg-preview.avif"
+        }
+      ]
+    }
+  ],
+  "footer": {
+    "slogan": "Especialistas en la curaduría de vinos finos y experiencias sensoriales de alta gama.",
+    "quick_links": [
+      { "name": "Vinos Tintos", "href": "#" },
+      { "name": "Blancos Premium", "href": "#" },
+      { "name": "Espumantes", "href": "#" },
+      { "name": "Destilados", "href": "#" }
+    ],
+    "store_links": [
+      { "name": "Ubicación", "href": "#" },
+      { "name": "Información de la Tienda", "href": "#" },
+      { "name": "Política de Envíos", "href": "#" },
+      { "name": "Contacto", "href": "#" }
+    ],
+    "legal_text": "© 2026 VINOLILLO. Solo para mayores de 18 años.",
+    "developed_by": "Desarrollado por Daniel González & Josué Solórzano"
+  }
+}

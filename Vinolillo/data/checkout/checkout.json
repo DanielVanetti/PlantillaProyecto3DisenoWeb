@@ -1,0 +1,54 @@
+{
+  "store_name": "Vinolillo",
+  "checkout": {
+    "steps": [
+      { "num": "01", "label": "CARRITO", "active": false, "done": true },
+      { "num": "02", "label": "ENTREGA Y PAGO", "active": true, "done": false },
+      { "num": "03", "label": "CONFIRMACIÓN", "active": false, "done": false }
+    ],
+    "provincias": ["San José", "Alajuela", "Cartago", "Heredia", "Guanacaste", "Puntarenas", "Limón"],
+    "metodos_entrega": [
+      { "id": "domicilio", "nombre": "Envío a domicilio", "costo_crc": 3500, "default": true },
+      { "id": "tienda", "nombre": "Recoger en tienda", "costo_crc": 0, "default": false }
+    ],
+    "items": [
+      {
+        "nombre": "Montes Alpha Cabernet Sauvignon",
+        "detalle": "2021 · VALLE DE COLCHAGUA, CL",
+        "precio_crc": 12995,
+        "cantidad": 1,
+        "imagen": "https://raw.githubusercontent.com/DanielVanetti/Tarea5-Vinolillo/main/img/Montes_Alpha_Cabernet_Sauvignon-removebg-preview.avif"
+      },
+      {
+        "nombre": "Glenfiddich 15 Años Single Malt",
+        "detalle": "750ML · SPEYSIDE, ESCOCIA",
+        "precio_crc": 31195,
+        "cantidad": 1,
+        "imagen": "https://raw.githubusercontent.com/DanielVanetti/Tarea5-Vinolillo/main/img/Glenfiddich_15_anos_Single_Malt-removebg-preview.avif"
+      }
+    ],
+    "resumen": {
+      "subtotal_crc": 44190,
+      "envio_crc": 3500,
+      "iva_crc": 5745,
+      "total_crc": 53435
+    }
+  },
+  "footer": {
+    "slogan": "Especialistas en la curaduría de vinos finos y experiencias sensoriales de alta gama.",
+    "quick_links": [
+      { "name": "Vinos Tintos", "href": "#" },
+      { "name": "Blancos Premium", "href": "#" },
+      { "name": "Espumantes", "href": "#" },
+      { "name": "Destilados", "href": "#" }
+    ],
+    "store_links": [
+      { "name": "Ubicación", "href": "#" },
+      { "name": "Información de la Tienda", "href": "#" },
+      { "name": "Política de Envíos", "href": "#" },
+      { "name": "Contacto", "href": "#" }
+    ],
+    "legal_text": "© 2026 VINOLILLO. Solo para mayores de 18 años.",
+    "developed_by": "Desarrollado por Daniel González & Josué Solórzano"
+  }
+}

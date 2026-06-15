@@ -1,0 +1,49 @@
+{
+  "store_name": "Vinolillo",
+  "carrito": {
+    "items": [
+      {
+        "id": "prod_05",
+        "nombre": "MONTES ALPHA CABERNET SAUVIGNON",
+        "detalle": "Cabernet Sauvignon 2021 · Valle de Colchagua, Chile",
+        "precio_crc": 12995,
+        "cantidad": 1,
+        "subtotal_crc": 12995,
+        "imagen": "https://raw.githubusercontent.com/DanielVanetti/Tarea5-Vinolillo/main/img/Montes_Alpha_Cabernet_Sauvignon-removebg-preview.avif"
+      },
+      {
+        "id": "prod_10",
+        "nombre": "GLENFIDDICH 15 AÑOS SINGLE MALT",
+        "detalle": "Single Malt · Speyside, Escocia",
+        "precio_crc": 31195,
+        "cantidad": 1,
+        "subtotal_crc": 31195,
+        "imagen": "https://raw.githubusercontent.com/DanielVanetti/Tarea5-Vinolillo/main/img/Glenfiddich_15_anos_Single_Malt-removebg-preview.avif"
+      }
+    ],
+    "resumen": {
+      "subtotal_crc": 44190,
+      "envio_crc": 3500,
+      "iva_crc": 5745,
+      "total_crc": 53435
+    },
+    "envio_gratis_desde_crc": 100000
+  },
+  "footer": {
+    "slogan": "Especialistas en la curaduría de vinos finos y experiencias sensoriales de alta gama.",
+    "quick_links": [
+      { "name": "Vinos Tintos", "href": "#" },
+      { "name": "Blancos Premium", "href": "#" },
+      { "name": "Espumantes", "href": "#" },
+      { "name": "Destilados", "href": "#" }
+    ],
+    "store_links": [
+      { "name": "Ubicación", "href": "#" },
+      { "name": "Información de la Tienda", "href": "#" },
+      { "name": "Política de Envíos", "href": "#" },
+      { "name": "Contacto", "href": "#" }
+    ],
+    "legal_text": "© 2026 VINOLILLO. Solo para mayores de 18 años.",
+    "developed_by": "Desarrollado por Daniel González & Josué Solórzano"
+  }
+}
