@@ -45,21 +45,23 @@
 
     <div class="row g-5 mb-5">
       <div class="col-12 col-md-5">
-        <div class="product-detail-img position-relative">
+        <div style="position:relative;background:var(--vino-container-low);display:flex;align-items:center;justify-content:center;padding:40px;min-height:480px;">
           {% if producto_actual.badge %}
-          <span class="vino-card-badge bg-burgundy position-absolute" style="top:16px; left:16px;">{{ producto_actual.badge }}</span>
+          <span class="vino-card-badge premium" style="top:16px; left:16px;bottom:auto;">{{ producto_actual.badge }}</span>
           {% endif %}
           <img src="{{ producto_actual.imagen }}" alt="{{ producto_actual.nombre }}"/>
         </div>
       </div>
 
-      <div class="col-12 col-md-7">
-        <a href="#" class="text-uppercase fw-semibold text-decoration-none d-block mb-2 text-burgundy-light" style="font-size:11px; letter-spacing:0.13em;">{{ producto_actual.marca }}</a>
-        <h1 class="display-5 mb-3 fw-bold text-dark">{{ producto_actual.nombre }}</h1>
+
+        <div class="col-12 col-md-7">
+        <a href="#" class="font-label-caps" style="font-size:11px;color:var(--vino-burgundy-light);text-decoration:none;display:block;margin-bottom:10px;">Concha y Toro</a>
+        <h1 class="font-display-lg mb-2" style="font-size:clamp(28px,4vw,42px);">{{ producto_actual.nombre }}</h1>
         <div class="d-flex align-items-center gap-3 mb-5">
-          <span class="fs-2 fw-bold text-burgundy-light">₡{{ producto_actual.precio_crc }}</span>
-          <span class="text-uppercase fw-semibold text-muted" style="font-size:11px; letter-spacing:0.13em;">{{ producto_actual.contenido_ml }}ml</span>
+          <span class="font-price-lg">₡{{ producto_actual.precio_crc }}</span>
+          <span class="font-label-caps text-muted-vino" style="font-size:11px;">{{ producto_actual.contenido_ml }}ml</span>
         </div>
+
 
         <div class="mb-5">
           <div class="d-flex justify-content-between align-items-baseline py-2 border-bottom border-top border-secondary-subtle">
