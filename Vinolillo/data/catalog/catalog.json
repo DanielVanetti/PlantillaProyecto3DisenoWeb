@@ -47,7 +47,7 @@
         "badge_style": "dark",
         "agotado": false,
         "image": "https://raw.githubusercontent.com/DanielVanetti/Tarea5-Vinolillo/main/img/Marques_de_Caceres_Crianza_Rioja-removebg-preview.avif",
-        "href": "ProducDetailPage.html"
+        "href": "../product/Marques-deCaceres.html"
       },
       {
         "id": "prod_01",
@@ -59,7 +59,7 @@
         "badge_style": null,
         "agotado": false,
         "image": "https://raw.githubusercontent.com/DanielVanetti/Tarea5-Vinolillo/main/img/Catena_Zapata_Adrianna_Vineyard_Malbec-removebg-preview.avif",
-        "href": "ProducDetailPage.html"
+        "href": "../product/Catena-Zapata.html"
       },
       {
         "id": "prod_04",
@@ -71,7 +71,7 @@
         "badge_style": null,
         "agotado": false,
         "image": "https://raw.githubusercontent.com/DanielVanetti/Tarea5-Vinolillo/main/img/Concha_y_Toro_Don_Melchor_Cabernet_Sauvignon-removebg-preview.avif",
-        "href": "ProducDetailPage.html"
+        "href": "../product/Concha-yToro.html"
       },
       {
         "id": "prod_08",
@@ -83,7 +83,7 @@
         "badge_style": null,
         "agotado": false,
         "image": "https://raw.githubusercontent.com/DanielVanetti/Tarea5-Vinolillo/main/img/Chateau_Mouton_Rothschild-removebg-preview.avif",
-        "href": "ProducDetailPage.html"
+        "href": "../product/Chateau-Mouton.html"
       },
       {
         "id": "prod_07",
@@ -95,7 +95,7 @@
         "badge_style": null,
         "agotado": false,
         "image": "https://raw.githubusercontent.com/DanielVanetti/Tarea5-Vinolillo/main/img/Torres_Mas_La_Plana_Cabernet_Sauvignon-removebg-preview.avif",
-        "href": "ProducDetailPage.html"
+        "href": "../product/Torres-Mas.html"
       },
       {
         "id": "prod_05",
@@ -107,7 +107,7 @@
         "badge_style": "agotado",
         "agotado": true,
         "image": "https://raw.githubusercontent.com/DanielVanetti/Tarea5-Vinolillo/main/img/Montes_Alpha_Cabernet_Sauvignon-removebg-preview.avif",
-        "href": "ProducDetailPage.html"
+        "href": "../product/Montes-Alpha.html"
       }
     ],
     "pagination": {
