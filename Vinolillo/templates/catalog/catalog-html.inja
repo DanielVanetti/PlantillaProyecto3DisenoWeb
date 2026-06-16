@@ -136,7 +136,7 @@
             <div class="col-12 col-sm-6 col-xl-4">
               <a href="{{ prod.href }}" class="vino-card-link">
                 <div class="vino-card h-100 d-flex flex-column">
-                  <div class="vino-card-img{% if prod.agotado %} position-relative{% endif %}" style="padding:24px;">
+                  <div class="vino-card-img{% if prod.agotado %} {% endif %}" style="padding:24px;">
                     <img src="{{ prod.image }}" alt="{{ prod.name }}"{% if prod.agotado %} style="opacity:.7;"{% endif %} />
                     {% if prod.badge %}
                     <span class="vino-card-badge {% if prod.badge_style == "dark" %}bg-dark{% else if prod.badge_style == "agotado" %}bg-burgundy-light{% endif %}">{{ prod.badge }}</span>
