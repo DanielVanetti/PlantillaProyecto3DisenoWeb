@@ -13,21 +13,21 @@
 
   <header class="vino-nav" id="mainNav">
     <div class="d-flex align-items-center gap-5 flex-grow-1">
-      <a href="VinolilloHomePage.html" class="brand">{{ store_name | upper }}</a>
+      <a href="../home/index.html" class="brand">{{ store_name | upper }}</a>
       <nav class="vino-nav-links">
-        <a href="../VinolilloCatalogPage.html">VINOS</a>
-        <a href="../VinolilloCatalogPage.html">DESTILADOS</a>
-        <a href="../VinolilloCatalogPage.html">CERVEZAS</a>
-        <a href="../VinolilloCatalogPage.html">LICORES</a>
-        <a href="../VinolilloCatalogPage.html">PROMOCIONES</a>
+        <a href="../catalog/catalog.html">VINOS</a>
+        <a href="../catalog/catalog.html">DESTILADOS</a>
+        <a href="../catalog/catalog.html">CERVEZAS</a>
+        <a href="../catalog/catalog.html">LICORES</a>
+        <a href="../catalog/catalog.html">PROMOCIONES</a>
       </nav>
     </div>
     <div class="d-flex align-items-center gap-3 ms-auto">
       <button class="btn btn-link text-dark p-1" aria-label="Buscar"><span class="material-symbols-outlined">search</span></button>
       <button class="btn btn-link text-dark p-1" aria-label="Mi cuenta"><span class="material-symbols-outlined">settings</span></button>
-      <a href="CartPage.html" class="text-dark p-1" style="position:relative; text-decoration:none;">
+      <a href="../cart/cart.html" class="text-dark p-1" style="position:relative; text-decoration:none;">
         <span class="material-symbols-outlined">shopping_cart</span>
-        <span class="vino-cart-badge">0</span>
+        <span class="vino-cart-badge">2</span>
       </a>
     </div>
   </header>
@@ -36,24 +36,24 @@
 
     <div class="bg-white border-bottom px-4 px-md-5 overflow-hidden">
       <nav class="d-flex align-items-center py-3 text-uppercase fw-semibold" style="font-size:11px; letter-spacing:0.1em; color:var(--vino-muted); gap:4px;">
-        <a href="VinolilloHomePage.html" class="text-decoration-none" style="color:var(--vino-secondary);">Inicio</a>
+        <a href="#" class="text-decoration-none" style="color:var(--vino-secondary);">Inicio</a>
         <span class="material-symbols-outlined" style="font-size:14px; color:var(--vino-border);">chevron_right</span>
         <span style="color:var(--vino-on-surface);">Portada</span>
       </nav>
     </div>
 
-    <section class="vino-hero">
-      <img class="vino-hero-img" src="{{ hero.image_url }}" alt="Premium Wine" />
-      <div class="vino-hero-gradient"></div>
-      <div class="vino-hero-content">
-        <span class="text-uppercase fw-semibold" style="color:var(--vino-burgundy-light); letter-spacing:.3em; font-size:11px;">
-          {{ hero.tag }}
-        </span>
-        <h1 class="display-3 text-white mt-3 mb-4">{{ hero.headline }}</h1>
-        <p class="fs-5 mb-5 text-white-50" style="max-width:440px;">
+    <section style="position:relative;min-height:640px;background:#0A0A0A;overflow:hidden;display:flex;align-items:center;">
+      <img class="vino-hero-img" src="{{ hero.image_url }}" alt="Premium Wine" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:right center;opacity:0.75;" />
+      <div style="position:absolute;inset:0;background:linear-gradient(to right, rgba(10,10,10,0.9) 35%, transparent 75%);"></div>
+      <div class="vino-hero-content fade-up" style="position:relative;z-index:2;padding:80px var(--margin-desk);max-width:540px;">
+        <span class="font-label-caps" style="color:var(--vino-burgundy-light);letter-spacing:.3em;">
+          {{ hero.tag }}</span>
+        <h1 class="font-display-xl text-white mt-3 mb-4">{{ hero.headline }}</h1>
+        <p class="font-body-lg mb-5" style="color:rgba(200,200,200,0.85);max-width:440px;">
           {{ hero.subheadline }}
         </p>
-        <a href="{{ hero.cta.href }}" class="btn-vino btn-vino-burgundy">
+        <a href="{{ hero.cta.href }}" class="btn-vino-burgundy"
+          style="font-size:12px;letter-spacing:.15em;padding:16px 40px;display:inline-flex;align-items:center;gap:8px;text-decoration:none;">
           {{ hero.cta.text }}
         </a>
       </div>
@@ -64,7 +64,7 @@
     <section class="container-fluid" style="padding:96px var(--margin-desk); max-width:1280px; margin:0 auto;">
       <div class="d-flex justify-content-between align-items-end mb-5 flex-wrap gap-3">
         <div>
-          <span class="text-uppercase fw-semibold text-burgundy-light d-block mb-2" style="font-size:11px; letter-spacing:0.2em;">{{ section.subtitle }}</span>
+          <span class="text-uppercase fw-semibold text-burgundy-light d-block mb-2" style="font-size:11px; letter-spacing:0.2em;font-family: var(--font-body);font-size: 11px;color: var(--vino-burgundy-light);">{{ section.subtitle }}</span>
           <h2 class="fs-2 mb-0">{{ section.title }}</h2>
         </div>
         <a href="{{ section.view_all.href }}" class="text-uppercase fw-semibold text-decoration-none border-bottom pb-1" style="font-size:11px; letter-spacing:0.13em; color:var(--vino-on-surface); border-color:var(--vino-on-surface) !important;">{{ section.view_all.text }}</a>
@@ -75,7 +75,7 @@
         <div class="col-12 col-sm-6 col-lg-3">
           <a href="{{ prod.href }}" class="vino-card-link">
             <div class="vino-card h-100 d-flex flex-column">
-              <div class="vino-card-img{% if prod.badge_style == "ultra" %} position-relative{% endif %}">
+              <div class="vino-card-img{% if prod.badge_style == "ultra" %} {% endif %}">
                 <img src="{{ prod.image }}" alt="{{ prod.name }}"{% if prod.badge_style == "burgundy" %} {% endif %}/>
                 {% if prod.badge %}
                 <span class="vino-card-badge {% if prod.badge_style == "burgundy" %}bg-burgundy{% else %}{% endif %}"{% if prod.badge_style == "ultra" %} style="background-color: var(--vino-ultra);"{% endif %}>{{ prod.badge }}</span>

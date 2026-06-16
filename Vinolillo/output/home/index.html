@@ -13,21 +13,21 @@
 
   <header class="vino-nav" id="mainNav">
     <div class="d-flex align-items-center gap-5 flex-grow-1">
-      <a href="VinolilloHomePage.html" class="brand">VINOLILLO</a>
+      <a href="../home/index.html" class="brand">VINOLILLO</a>
       <nav class="vino-nav-links">
-        <a href="../VinolilloCatalogPage.html">VINOS</a>
-        <a href="../VinolilloCatalogPage.html">DESTILADOS</a>
-        <a href="../VinolilloCatalogPage.html">CERVEZAS</a>
-        <a href="../VinolilloCatalogPage.html">LICORES</a>
-        <a href="../VinolilloCatalogPage.html">PROMOCIONES</a>
+        <a href="../catalog/catalog.html">VINOS</a>
+        <a href="../catalog/catalog.html">DESTILADOS</a>
+        <a href="../catalog/catalog.html">CERVEZAS</a>
+        <a href="../catalog/catalog.html">LICORES</a>
+        <a href="../catalog/catalog.html">PROMOCIONES</a>
       </nav>
     </div>
     <div class="d-flex align-items-center gap-3 ms-auto">
       <button class="btn btn-link text-dark p-1" aria-label="Buscar"><span class="material-symbols-outlined">search</span></button>
       <button class="btn btn-link text-dark p-1" aria-label="Mi cuenta"><span class="material-symbols-outlined">settings</span></button>
-      <a href="CartPage.html" class="text-dark p-1" style="position:relative; text-decoration:none;">
+      <a href="../cart/cart.html" class="text-dark p-1" style="position:relative; text-decoration:none;">
         <span class="material-symbols-outlined">shopping_cart</span>
-        <span class="vino-cart-badge">0</span>
+        <span class="vino-cart-badge">2</span>
       </a>
     </div>
   </header>
@@ -36,24 +36,24 @@
 
     <div class="bg-white border-bottom px-4 px-md-5 overflow-hidden">
       <nav class="d-flex align-items-center py-3 text-uppercase fw-semibold" style="font-size:11px; letter-spacing:0.1em; color:var(--vino-muted); gap:4px;">
-        <a href="VinolilloHomePage.html" class="text-decoration-none" style="color:var(--vino-secondary);">Inicio</a>
+        <a href="#" class="text-decoration-none" style="color:var(--vino-secondary);">Inicio</a>
         <span class="material-symbols-outlined" style="font-size:14px; color:var(--vino-border);">chevron_right</span>
         <span style="color:var(--vino-on-surface);">Portada</span>
       </nav>
     </div>
 
-    <section class="vino-hero">
-      <img class="vino-hero-img" src="https://raw.githubusercontent.com/DanielVanetti/Tarea5-Vinolillo/main/img/img_hero.jpg" alt="Premium Wine" />
-      <div class="vino-hero-gradient"></div>
-      <div class="vino-hero-content">
-        <span class="text-uppercase fw-semibold" style="color:var(--vino-burgundy-light); letter-spacing:.3em; font-size:11px;">
-          EDICIÓN LIMITADA
-        </span>
-        <h1 class="display-3 text-white mt-3 mb-4">El Arte de la Tierra en una Botella</h1>
-        <p class="fs-5 mb-5 text-white-50" style="max-width:440px;">
+    <section style="position:relative;min-height:640px;background:#0A0A0A;overflow:hidden;display:flex;align-items:center;">
+      <img class="vino-hero-img" src="https://raw.githubusercontent.com/DanielVanetti/Tarea5-Vinolillo/main/img/img_hero.jpg" alt="Premium Wine" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:right center;opacity:0.75;" />
+      <div style="position:absolute;inset:0;background:linear-gradient(to right, rgba(10,10,10,0.9) 35%, transparent 75%);"></div>
+      <div class="vino-hero-content fade-up" style="position:relative;z-index:2;padding:80px var(--margin-desk);max-width:540px;">
+        <span class="font-label-caps" style="color:var(--vino-burgundy-light);letter-spacing:.3em;">
+          EDICIÓN LIMITADA</span>
+        <h1 class="font-display-xl text-white mt-3 mb-4">El Arte de la Tierra en una Botella</h1>
+        <p class="font-body-lg mb-5" style="color:rgba(200,200,200,0.85);max-width:440px;">
           Descubra nuestra curaduría exclusiva de los mejores valles del mundo, seleccionados por expertos para paladares exigentes.
         </p>
-        <a href="VinolilloCatalogPage.html" class="btn-vino btn-vino-burgundy">
+        <a href="../catalog/catalog.html" class="btn-vino-burgundy"
+          style="font-size:12px;letter-spacing:.15em;padding:16px 40px;display:inline-flex;align-items:center;gap:8px;text-decoration:none;">
           VER COLECCIÓN
         </a>
       </div>
@@ -62,15 +62,15 @@
     <section class="container-fluid" style="padding:96px var(--margin-desk); max-width:1280px; margin:0 auto;">
       <div class="d-flex justify-content-between align-items-end mb-5 flex-wrap gap-3">
         <div>
-          <span class="text-uppercase fw-semibold text-burgundy-light d-block mb-2" style="font-size:11px; letter-spacing:0.2em;">SELECCIÓN DEL SOMMELIER</span>
+          <span class="text-uppercase fw-semibold text-burgundy-light d-block mb-2" style="font-size:11px; letter-spacing:0.2em;font-family: var(--font-body);font-size: 11px;color: var(--vino-burgundy-light);">SELECCIÓN DEL SOMMELIER</span>
           <h2 class="fs-2 mb-0">Productos Destacados</h2>
         </div>
-        <a href="VinolilloCatalogPage.html" class="text-uppercase fw-semibold text-decoration-none border-bottom pb-1" style="font-size:11px; letter-spacing:0.13em; color:var(--vino-on-surface); border-color:var(--vino-on-surface) !important;">VER TODO</a>
+        <a href="../catalog/catalog.html" class="text-uppercase fw-semibold text-decoration-none border-bottom pb-1" style="font-size:11px; letter-spacing:0.13em; color:var(--vino-on-surface); border-color:var(--vino-on-surface) !important;">VER TODO</a>
       </div>
 
       <div class="row g-4">
         <div class="col-12 col-sm-6 col-lg-3">
-          <a href="ProducDetailPage.html" class="vino-card-link">
+          <a href="../detail/productDetail.html" class="vino-card-link">
             <div class="vino-card h-100 d-flex flex-column">
               <div class="vino-card-img">
                 <img src="https://raw.githubusercontent.com/DanielVanetti/Tarea5-Vinolillo/main/img/Montes_Alpha_Cabernet_Sauvignon-removebg-preview.avif" alt="Montes Alpha Cabernet Sauvignon"/>
@@ -90,7 +90,7 @@
           </a>
         </div>
         <div class="col-12 col-sm-6 col-lg-3">
-          <a href="ProducDetailPage.html" class="vino-card-link">
+          <a href="../detail/productDetail.html" class="vino-card-link">
             <div class="vino-card h-100 d-flex flex-column">
               <div class="vino-card-img">
                 <img src="https://raw.githubusercontent.com/DanielVanetti/Tarea5-Vinolillo/main/img/Concha_y_Toro_Don_Melchor_Cabernet_Sauvignon-removebg-preview.avif" alt="Concha y Toro Don Melchor Cabernet Sauvignon"/>
@@ -109,7 +109,7 @@
           </a>
         </div>
         <div class="col-12 col-sm-6 col-lg-3">
-          <a href="ProducDetailPage.html" class="vino-card-link">
+          <a href="../detail/productDetail.html" class="vino-card-link">
             <div class="vino-card h-100 d-flex flex-column">
               <div class="vino-card-img">
                 <img src="https://raw.githubusercontent.com/DanielVanetti/Tarea5-Vinolillo/main/img/Catena_Zapata_White_Bones_Chardonnay-removebg-preview.avif" alt="Catena Zapata White Bones Chardonnay"/>
@@ -128,9 +128,9 @@
           </a>
         </div>
         <div class="col-12 col-sm-6 col-lg-3">
-          <a href="ProducDetailPage.html" class="vino-card-link">
+          <a href="../detail/productDetail.html" class="vino-card-link">
             <div class="vino-card h-100 d-flex flex-column">
-              <div class="vino-card-imgposition-relative">
+              <div class="vino-card-img">
                 <img src="https://raw.githubusercontent.com/DanielVanetti/Tarea5-Vinolillo/main/img/Chateau_Mouton_Rothschild-removebg-preview.avif" alt="Château Mouton Rothschild"/>
                 <span class="vino-card-badge "style="background-color: var(--vino-ultra);">ULTRA-PREMIUM</span>
               </div>

@@ -4,7 +4,7 @@
     "tag": "EDICIÓN LIMITADA",
     "headline": "El Arte de la Tierra en una Botella",
     "subheadline": "Descubra nuestra curaduría exclusiva de los mejores valles del mundo, seleccionados por expertos para paladares exigentes.",
-    "cta": { "text": "VER COLECCIÓN", "href": "VinolilloCatalogPage.html" },
+    "cta": { "text": "VER COLECCIÓN", "href": "../catalog/catalog.html" },
     "image_url": "https://raw.githubusercontent.com/DanielVanetti/Tarea5-Vinolillo/main/img/img_hero.jpg"
   },
   "sections": [
@@ -13,7 +13,7 @@
       "type": "product_grid",
       "title": "Productos Destacados",
       "subtitle": "SELECCIÓN DEL SOMMELIER",
-      "view_all": { "text": "VER TODO", "href": "VinolilloCatalogPage.html" },
+      "view_all": { "text": "VER TODO", "href": "../catalog/catalog.html" },
       "products": [
         {
           "id": "prod_05",
@@ -23,7 +23,7 @@
           "badge": "PREMIUM",
           "badge_style": "burgundy",
           "image": "https://raw.githubusercontent.com/DanielVanetti/Tarea5-Vinolillo/main/img/Montes_Alpha_Cabernet_Sauvignon-removebg-preview.avif",
-          "href": "ProducDetailPage.html"
+          "href": "../detail/productDetail.html"
         },
         {
           "id": "prod_04",
@@ -33,7 +33,7 @@
           "badge": null,
           "badge_style": null,
           "image": "https://raw.githubusercontent.com/DanielVanetti/Tarea5-Vinolillo/main/img/Concha_y_Toro_Don_Melchor_Cabernet_Sauvignon-removebg-preview.avif",
-          "href": "ProducDetailPage.html"
+          "href": "../detail/productDetail.html"
         },
         {
           "id": "prod_09",
@@ -43,7 +43,7 @@
           "badge": null,
           "badge_style": null,
           "image": "https://raw.githubusercontent.com/DanielVanetti/Tarea5-Vinolillo/main/img/Catena_Zapata_White_Bones_Chardonnay-removebg-preview.avif",
-          "href": "ProducDetailPage.html"
+          "href": "../detail/productDetail.html"
         },
         {
           "id": "prod_08",
@@ -53,7 +53,7 @@
           "badge": "ULTRA-PREMIUM",
           "badge_style": "ultra",
           "image": "https://raw.githubusercontent.com/DanielVanetti/Tarea5-Vinolillo/main/img/Chateau_Mouton_Rothschild-removebg-preview.avif",
-          "href": "ProducDetailPage.html"
+          "href": "../detail/productDetail.html"
         }
       ]
     }
