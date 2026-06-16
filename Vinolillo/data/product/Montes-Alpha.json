@@ -1,4 +1,6 @@
-  {
+{
+  "store_name": "Vinolillo",
+  "producto_actual":    {
       "id": "prod_05",
       "nombre": "Montes Alpha Cabernet Sauvignon",
       "descripcion": "Cabernet chileno, frutos negros, menta y roble tostado con buen cuerpo",
@@ -17,3 +19,4 @@
       "cantidad": 40,
       "imagen": "https://raw.githubusercontent.com/DanielVanetti/Tarea5-Vinolillo/main/img/Montes_Alpha_Cabernet_Sauvignon-removebg-preview.avif"
     }
+}

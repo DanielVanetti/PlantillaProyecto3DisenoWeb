@@ -1,4 +1,6 @@
- {
+{
+  "store_name": "Vinolillo",
+  "producto_actual":  {
       "id": "prod_06",
       "nombre": "Marques de Caceres Crianza Rioja",
       "descripcion": "Tempranillo con vainilla, cereza y notas de roble americano, elegante",
@@ -17,3 +19,4 @@
       "cantidad": 30,
       "imagen": "https://raw.githubusercontent.com/DanielVanetti/Tarea5-Vinolillo/main/img/Marques_de_Caceres_Crianza_Rioja-removebg-preview.avif"
     }
+}

@@ -1,4 +1,7 @@
-{
+
+   {
+  "store_name": "Vinolillo",
+  "producto_actual":   {
       "id": "prod_08",
       "nombre": "Chateau Mouton Rothschild",
       "descripcion": "Gran vino de Burdeos, cassis, cedro y tierra húmeda, muy largo",
@@ -15,6 +18,7 @@
       "precio_crc": 270400,
       "descuento": 5,
       "cantidad": 100,
-      "badge": "EXCLUSIVO",
+      "badge": "ULTRA-PREMIUM",
       "imagen": "https://raw.githubusercontent.com/DanielVanetti/Tarea5-Vinolillo/main/img/Chateau_Mouton_Rothschild-removebg-preview.avif"
     }
+}

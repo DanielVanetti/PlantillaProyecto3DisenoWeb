@@ -1,4 +1,8 @@
- {
+
+
+   {
+  "store_name": "Vinolillo",
+  "producto_actual":   {
       "id": "prod_01",
       "nombre": "Catena Zapata Adrianna Vineyard Malbec",
       "descripcion": "Vino tinto icónico, notas de mora, violetas y especias con final largo",
@@ -17,3 +21,4 @@
       "cantidad": 50,
       "imagen": "https://raw.githubusercontent.com/DanielVanetti/Tarea5-Vinolillo/main/img/Catena_Zapata_Adrianna_Vineyard_Malbec-removebg-preview.avif"
     }
+}

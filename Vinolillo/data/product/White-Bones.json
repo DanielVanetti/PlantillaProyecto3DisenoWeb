@@ -1,4 +1,7 @@
-{
+
+ {
+  "store_name": "Vinolillo",
+  "producto_actual":     {
       "id": "prod_09",
       "nombre": "Catena Zapata White Bones Chardonnay",
       "descripcion": "Chardonnay de gran altitud, mineralidad y cítricos con barrica elegante",
@@ -18,3 +21,4 @@
       "badge": "OFERTA",
       "imagen": "https://raw.githubusercontent.com/DanielVanetti/Tarea5-Vinolillo/main/img/Catena_Zapata_White_Bones_Chardonnay-removebg-preview.avif"
     }
+}

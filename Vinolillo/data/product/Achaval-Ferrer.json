@@ -1,4 +1,6 @@
- {
+    {
+  "store_name": "Vinolillo",
+  "producto_actual":  {
       "id": "prod_02",
       "nombre": "Achaval Ferrer Quimera",
       "descripcion": "Blend de Malbec y Cabernet Sauvignon, cereza negra, tabaco y taninos sedosos",
@@ -17,3 +19,4 @@
       "cantidad": 100,
       "imagen": "https://raw.githubusercontent.com/DanielVanetti/Tarea5-Vinolillo/main/img/Achaval_Ferrer_Quimera-removebg-preview.avif"
     }
+}

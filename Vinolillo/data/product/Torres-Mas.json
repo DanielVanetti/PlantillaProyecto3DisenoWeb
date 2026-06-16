@@ -1,4 +1,7 @@
-{
+
+ {
+  "store_name": "Vinolillo",
+  "producto_actual":     {
       "id": "prod_07",
       "nombre": "Torres Mas La Plana Cabernet Sauvignon",
       "descripcion": "Cabernet Sauvignon premium de Penedés, intenso con ciruela madura",
@@ -17,3 +20,4 @@
       "cantidad": 100,
       "imagen": "https://raw.githubusercontent.com/DanielVanetti/Tarea5-Vinolillo/main/img/Torres_Mas_La_Plana_Cabernet_Sauvignon-removebg-preview.avif"
     }
+}

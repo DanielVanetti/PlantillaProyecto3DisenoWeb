@@ -1,4 +1,7 @@
-{
+
+ {
+  "store_name": "Vinolillo",
+  "producto_actual":    {
       "id": "prod_03",
       "nombre": "Zuccardi Valle de Uco Malbec",
       "descripcion": "Malbec de altura con notas de frutos negros y toques florales",
@@ -17,3 +20,4 @@
       "cantidad": 20,
       "imagen": "https://raw.githubusercontent.com/DanielVanetti/Tarea5-Vinolillo/main/img/Zuccardi_Valle_de_Uco_Malbec-removebg-preview.avif"
     }
+}

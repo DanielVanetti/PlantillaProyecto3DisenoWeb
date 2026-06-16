@@ -1,4 +1,7 @@
+
  {
+  "store_name": "Vinolillo",
+  "producto_actual":     {
       "id": "prod_10",
       "nombre": "Glenfiddich 15 Años Single Malt",
       "descripcion": "Single malt premium, miel, fruta madura y roble con final suave",
@@ -17,3 +20,4 @@
       "cantidad": 20,
       "imagen": "https://raw.githubusercontent.com/DanielVanetti/Tarea5-Vinolillo/main/img/Glenfiddich_15_anos_Single_Malt-removebg-preview.avif"
  }
+}
